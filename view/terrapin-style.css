@@ -1,0 +1,138 @@
+#button-block {
+  position: absolute;
+}
+
+#grid rect {
+  fill: none;
+  stroke: firebrick;
+}
+
+#grid line {
+  stroke: lightgray;
+}
+
+.nodes .dragging {
+  fill-opacity: 0.7;
+}
+
+/* colored  */
+.colored .terrapin-connection-point {
+  stroke: white;
+  stroke-width: 1;
+  fill: #CCDBCC;
+}
+
+.colored .terrapin-title-pillow {
+  cursor: pointer;
+}
+
+.colored .active rect {
+  fill: red;
+}
+
+.colored .active text {
+  fill: white;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.colored path.active {
+  stroke: red;
+  stroke-width: 4;
+}
+
+.colored .terrapin-title-text {
+  fill: black;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.colored .terrapin-predicate-text {
+  fill: black;
+  font-size: 12px;
+}
+
+.colored .terrapin-object-pillow {
+  cursor: pointer;
+}
+
+.colored .terrapin-object-text {
+  fill: black;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.colored .terrapin-body-block {
+  fill: #D8E2D8;
+  stroke: white;
+  stroke-width: 2;
+}
+
+.colored .links {
+  stroke-width: 2;
+}
+
+
+/*monochrome*/
+.monochrome .terrapin-connection-point {
+  stroke: white;
+  stroke-width: 1;
+  fill: #CCDBCC;
+}
+
+.monochrome .terrapin-title-pillow {
+  cursor: pointer;
+  /*B&W*/
+  fill: rgb(67, 67, 67);
+}
+
+.monochrome .terrapin-title-pillow.active {
+  fill: red;
+}
+
+.monochrome .terrapin-title-text {
+  /*fill: black;*/
+  /*B&W*/
+  fill: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.monochrome .terrapin-predicate-text {
+  fill: black;
+  font-size: 14px;
+}
+
+.monochrome .terrapin-object-pillow {
+  /*B&W*/
+  fill: gray !important;
+  cursor: pointer;
+}
+
+/*B&W*/
+.monochrome .sourceNodes {
+  fill: gray;
+}
+
+.monochrome .terrapin-object-text {
+  /*fill: black;*/
+  /*B&W*/
+  fill: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.monochrome .terrapin-body-block {
+  fill: #D8E2D8;
+  stroke: white;
+  stroke-width: 2;
+}
+
+.monochrome .links {
+  stroke-width: 2;
+}
+
+.monochrome .links path, .monochrome .links line{
+  /*B&W*/
+  stroke: gray;
+}

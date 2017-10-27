@@ -1,0 +1,35 @@
+{
+  "name": "fstmbot",
+  "version": "0.0.1",
+  "description": "can't touch this",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cleanup": "node utils/parseBotKnowledges && node utils/reloadKnowledgeDB"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cnstntn-kndrtv/fstmbot.git"
+  },
+  "author": "Constantin Kondratyev",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/cnstntn-kndrtv/fstmbot/issues"
+  },
+  "homepage": "https://github.com/cnstntn-kndrtv/fstmbot#readme",
+  "dependencies": {
+    "az": "^0.2.3",
+    "commander": "^2.11.0",
+    "d3": "^4.11.0",
+    "d3-bboxCollide": "^1.0.3",
+    "debug": "^3.0.1",
+    "express": "latest",
+    "jquery": "^3.2.1",
+    "langdetect": "git://github.com/cnstntn-kndrtv/langdetect.git",
+    "level": "^2.0.0",
+    "levelgraph": "^2.1.1",
+    "n3": "^0.11.2",
+    "socket.io": "latest",
+    "transliteration": "git://github.com/cnstntn-kndrtv/transliteration.git"
+  }
+}

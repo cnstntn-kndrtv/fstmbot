@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+  <title>AIScript</title>
+  <link href="css/normalize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/grid.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/typography.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/material-buttons.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/z-depth.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/chat.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+
+<body>
+  <div class="main row">
+    <div id="text-chat">
+      <div class='iphone-front col s12 m6 l4 offset-m3 offset-l4 center'>
+        <!-- <img src='img/iphone-front.png' class='iphone-body'> -->
+        <div class="phone-screen z-depth-3">
+          <!-- <img src="img/status-bar.png" class="status-bar hide-on-small-only"> -->
+          <div class="chat">
+            <div class="chat-messages-window" id="chatMessages">
+              <ul class="chat-messages-list" id="chatList">
+              </ul>
+            </div>
+            <div class="chat-input-bar">
+              <div class="chat-input-wrapper">
+                <button class="chat-input-tool dark-interface-color-text" onclick="showMain();">
+                  [X]
+                </button>
+                <input type="text" size="200" class="chat-input" id="chatInput" onkeypress="submitEnter()">
+                <button class="chat-send dark-interface-color-text" onclick="sendMessage()">
+                  >>>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <form class="col s12 m6 l4 offset-m3 offset-l4 center" onsubmit="return false" style="display: none">
+      <input type="text" id="userName"></input>
+      <!--button class="waves-effect waves-light orange btn" type="submit" value="Сменить"-->
+    </form>
+
+    <!--div id="help">
+      <div class="phone-screen col s12 m6 l4 offset-m3 offset-l4">
+        <span>Возможные вопросы:</span>
+        <ul>
+          <li>сколько будет два плюс два минус три умножить на десять</li>
+          <li>переведи 42 в римские числа</li>
+          <li>переведи 42 в двоичный код</li>
+          <li>переведи 42 в шестнадцатиричный код</li>
+          <li>четное ли число 42?</li>
+        </ul>
+      </div>
+    </div-->
+
+  </div>
+  
+  <script>
+    document.body.style.overflow = "hidden" // lock scroll
+  </script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/textChat.js"></script>
+</body>
+
+</html>

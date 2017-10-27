@@ -1,0 +1,70 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix orgf: <http://sw.kloud.one/ontorugrammaform/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema> .
+@prefix : <http://ldf.kloud.one/botKnowledgeTbox#> .
+@base <http://ldf.kloud.one/botKnowledgeTbox#> .
+
+# Author: Constantin Kondratev
+# Created: 19.10.2017
+# Description: bot knowledge t-box
+
+<http://ldf.kloud.one/botKnowledgeTbox> a owl:Ontology ;
+                                owl:versionIRI <http://ldf.kloud.one/botKnowledgeTbox/0.0.1> ;
+                                dc:date "19-10-2017" ;
+                                rdfs:label "Bot knowledge T-box"@en ;
+                                rdfs:title "схема знаний для бота"@ru ,
+                                            "T-box for bot knowledge"@en .
+
+# Class
+:Class a rdfs:Class ;
+    rdfs:label "класс Классов сущностей"@ru ;
+    rdfs:comment "это классы сущностей. Например классы Сыры, Ингридиенты"@ru .
+
+:Entity a rdfs:Class ;
+    rdfs:label "класс Сущность"@ru ;
+    rdfs:comment "это конечные сущности. Например бри - это сущность класса Сыр"@ru .
+
+#subClassOf - property
+:subClassOf a owl:ObjectProperty ;
+    rdfs:range :Class ;
+    rdfs:label "подкласс класса"@ru ;
+    rdfs:comment "свойство, указывающее на принадлежность данного подкласса какому-то классу. Например Сыр - подкласс класса Ингридиенты"@ru .
+
+#instanceOf - property
+:instanceOf a owl:ObjectProperty ;
+    rdfs:range :Class ;
+    rdfs:label "экземпляр класса"@ru ;
+    rdfs:comment "свойство, указывающее на принадлежность данного экземпляра какому-то классу. Например бри относится к классу Сыры"@ru .
+
+#value - текстовое представление сущности
+:writtenRep a owl:ObjectProperty ;
+    rdfs:range rdfs:Literal ;
+    rdfs:label "текстовое представление сущности"@ru .
+
+#rwittenLemma - лемма текстового представления сущности
+:writtenLemma a owl:ObjectProperty ;
+    rdfs:range rdfs:Literal ;
+    rdfs:label "лемма текстового представления сущности"@ru .
+
+# пример
+# :Entity a bot:Class ;
+#     bot:writtenRep "entity"@en ;
+#     bot:writtenLemma "entity"@en .
+
+# :Ingredienty a bot:Class ;
+#     bot:subClassOf :Entity ;
+#     bot:writtenRep 'ингредиенты'@ru ;
+#     bot:writtenLemma 'ингредиент'@ru .
+
+# :Syr a bot:Class ;
+#     bot:subClassOf :Ingredient ;
+#     bot:writtenRep 'сыр'@ru ;
+#     bot:writtenLemma 'сыр'@ru .
+
+# :bri_instanceOf_Syr a bot:Entity ;
+#     bot:instanceOf :Syr ;
+#     rdf:writtenRep 'бри'@ru ;
+#     rdf:writtenLemma 'бри'@ru .

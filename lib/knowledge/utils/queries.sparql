@@ -1,0 +1,5 @@
+SELECT ?
+WHERE {
+    ?entityId rdf:value ?entityValue .
+    ?entityId bot:instanceOfClass ?class .
+}
