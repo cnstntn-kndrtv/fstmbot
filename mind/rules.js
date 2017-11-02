@@ -7,18 +7,14 @@ module.exports = [
         action: null,
     },
     {
-        input: null,
-        inputContext: null,
-        nextContext: null,
-        response: null,
-        action: null,
-    },
-    {
         input: 'привет',
         inputContext: null,
         nextContext: 'привет',
         response: ['здарова'],
-        action: null,
+        action: function(next) {
+            this.actions.default.getPreviousQuestions(this, 5);
+            next();
+        },
     },
     {
         input: ['как дела?'],
@@ -32,32 +28,32 @@ module.exports = [
         inputContext: null,
         nextContext: 'saved',
         response: ['name saved'],
-        action: function(){
-            this.actions.default.save(this, 'name', 'Mike');
+        action: function(next){
+            this.actions.default.save(this, 'name', 'Mike', () => next());
         },
     },
     {
         input: 'get',
-        inputContext: 'saved',
+        inputContext: null,
         nextContext: 'saved',
         response: null,
-        action: function(){
+        action: function(next){
             this.actions.default.get(this, 'name', (value) => {
                 this.bot.response = value;
+                next();
             })
-            this.actions.default.getPreviousQuestions(this, 5);
         },
     },
 
     {
-        input: '~ингридиенты',
+        input: '^ингридиенты',
         inputContext: null,
         nextContext: 'ingredients',
         response: 'ингридиент найден',
-        action: () => {console.log('action 2')},
+        action: (next) => {console.log('action 2'); next()},
     },
     {
-        input: '?:цена ~товары ~ингридиенты',
+        input: '?:цена ^товары ^ингридиенты',
         inputContext: null,
         nextContext: 'ingredients',
         response: 'ингридиент найден!!!!!!!',
@@ -68,8 +64,9 @@ module.exports = [
         inputContext: null,
         nextContext: 'hello',
         response: ['hi'],
-        action: function() {
+        action: function(next) {
             this.actions.myFunction(this, 'some param');
+            next();
         },
     },
 ]
