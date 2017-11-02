@@ -1,0 +1,67 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix orgf: <http://sw.kloud.one/ontorugrammaform/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema> .
+@prefix bot: <http://ldf.kloud.one/botKnowledgeTbox#> .
+@prefix : <http://ldf.kloud.one/botKnowledge#> .
+@base <http://ldf.kloud.one/botKnowledge#> .
+
+# Author: Constantin Kondratev
+# Description: bot knowledge
+
+<http://ldf.kloud.one/botKnowledge> a owl:Ontology ;
+                                owl:versionIRI <http://ldf.kloud.one/botKnowledge/0.0.1> ;
+                                dc:date "19-10-2017" ;
+                                rdfs:label "Bot knowledge"@en ;
+                                rdfs:title "знания бота"@ru ,
+                                            "bot knowledge"@en .
+
+
+# class entity
+:Entity a bot:Class ;
+    bot:writtenRep "entity"@en ;
+    bot:writtenLemma "entity"@en .
+
+# class ингридиенты subClass of Entity
+:Ingridienti a bot:Class ;
+    bot:subClassOf :Entity ;
+    bot:writtenRep "ингридиенты"@ru ;
+    bot:writtenLemma "ингридиент"@ru .
+
+# class сыр subClass of Ingridienti
+:Sir a bot:Class ;
+    bot:subClassOf :Ingridienti ;
+    bot:writtenRep "сыр"@ru ;
+    bot:writtenLemma "сыр"@ru .
+
+# class капуста subClass of Ingridienti
+:Kapusta a bot:Class ;
+    bot:subClassOf :Ingridienti ;
+    bot:writtenRep "капуста"@ru ;
+    bot:writtenLemma "капуста"@ru .
+
+# сыр instance of Sir
+:sir_instanceOf_Sir a bot:Entity ;
+    bot:instanceOf :Sir ;
+    bot:writtenRep "сыр"@ru ;
+    bot:writtenLemma "сыр"@ru .
+
+# гауда instance of Sir
+:gauda_instanceOf_Sir a bot:Entity ;
+    bot:instanceOf :Sir ;
+    bot:writtenRep "гауда"@ru ;
+    bot:writtenLemma "гауд"@ru .
+
+# бри instance of Sir
+:bri_instanceOf_Sir a bot:Entity ;
+    bot:instanceOf :Sir ;
+    bot:writtenRep "бри"@ru ;
+    bot:writtenLemma "бри"@ru .
+
+# брюссельская_капуста instance of Kapusta
+:bryusselskaya_kapusta_instanceOf_Kapusta a bot:Entity ;
+    bot:instanceOf :Kapusta ;
+    bot:writtenRep "брюссельская_капуста"@ru ;
+    bot:writtenLemma "брюссельская_капуст"@ru .

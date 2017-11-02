@@ -1,0 +1,55 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix orgf: <http://sw.kloud.one/ontorugrammaform/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema> .
+@prefix bot: <http://ldf.kloud.one/botKnowledgeTbox#> .
+@prefix : <http://ldf.kloud.one/botKnowledge#> .
+@base <http://ldf.kloud.one/botKnowledge#> .
+
+# Author: Constantin Kondratev
+# Description: bot knowledge
+
+<http://ldf.kloud.one/botKnowledge> a owl:Ontology ;
+                                owl:versionIRI <http://ldf.kloud.one/botKnowledge/0.0.1> ;
+                                dc:date "19-10-2017" ;
+                                rdfs:label "Bot knowledge"@en ;
+                                rdfs:title "знания бота"@ru ,
+                                            "bot knowledge"@en .
+
+
+# class entity
+:Entity a bot:Class ;
+    bot:writtenRep "entity"@en ;
+    bot:writtenLemma "entity"@en .
+
+# class числительные subClass of Entity
+:Chislitelnie a bot:Class ;
+    bot:subClassOf :Entity ;
+    bot:writtenRep "числительные"@ru ;
+    bot:writtenLemma "числительный"@ru .
+
+# class один subClass of Chislitelnie
+:Odin a bot:Class ;
+    bot:subClassOf :Chislitelnie ;
+    bot:writtenRep "один"@ru ;
+    bot:writtenLemma "один"@ru .
+
+# class слово subClass of Chislitelnie
+:Slovo a bot:Class ;
+    bot:subClassOf :Chislitelnie ;
+    bot:writtenRep "слово"@ru ;
+    bot:writtenLemma "слово"@ru .
+
+# 1 instance of Odin
+:1_instanceOf_Odin a bot:Entity ;
+    bot:instanceOf :Odin ;
+    bot:writtenRep "1" ;
+    bot:value 1 .
+
+# some instance of Slovo
+:some_instanceOf_Slovo a bot:Entity ;
+    bot:instanceOf :Slovo ;
+    bot:writtenRep "some"@en ;
+    bot:writtenLemma "some"@en .
