@@ -69,4 +69,18 @@ module.exports = [
             next();
         },
     },
+    {
+        input: ['_череп'],
+        inputContext: null,
+        nextContext: null,
+        response: ['root'],
+        action: null
+    },
+    {
+        input: ['стол'],
+        inputContext: null,
+        nextContext: null,
+        response: ['lemma'],
+        action: null
+    },
 ]

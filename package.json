@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cleanup": "node utils/parseBotKnowledges && node utils/reloadKnowledgeDB"
+    "cleanup": "node utils/parseBotKnowledges && node utils/reloadKnowledgeDB",
+    "view": "node utils/createView"
   },
   "repository": {
     "type": "git",

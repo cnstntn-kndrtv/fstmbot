@@ -5,11 +5,11 @@ let Bot = require('../lib/bot/Bot');
 let bot = new Bot();
 
 let rules = require('../mind/rules');
-let plugins = require('../mind/actions');
+let actions = require('../mind/actions');
 
 bot.init().then((msg) => {
     console.log(msg);
-    bot.addActions(plugins);
+    bot.addActions(actions);
     bot.addRules(rules);
     start();
 }).catch((e) => {console.log(e)})
@@ -17,8 +17,8 @@ bot.init().then((msg) => {
 let triples = [];
 function start() {
     // TODO rules - Object
-    bot.rules.forEach((r) => {
-        let inputTriple = {subject: r.id, predicate: 'input', object: r.inputs.join(', '), visible: false}
+    bot._rules.forEach((r) => {
+        let inputTriple = {subject: r.id, predicate: 'input', object: r.rawInput, visible: false}
         let inputContextTriple = {subject: r.id, predicate: 'inputContext', object: r.inputContext, visible: false}
         let nextContextTriple = {subject: r.id, predicate: 'nextContext', object: r.nextContext, visible: false}
         
@@ -31,7 +31,7 @@ function start() {
         
         triples.push(inputTriple, inputContextTriple, nextContextTriple, responseTriple, actionTriple);
 
-        bot.rules.forEach((cr) => {
+        bot._rules.forEach((cr) => {
             if (cr.inputContext == r.nextContext) {
                 triples.push({subject: r.id, predicate: 'nextRules', object: cr.id, visible: true});
             };

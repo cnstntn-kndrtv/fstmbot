@@ -33,33 +33,45 @@ function startSession(id) {
 
 function startConversation(bot) {
     console.log('\n---------START CONVERSATION------------\n');
-    bot.answer('save', (m) => {
-        console.log(bot.question.rawQuestion, '::answer:', m);
-    })
+    // bot.answer('save', (m) => {
+    //     console.log('::', bot.question.rawQuestion, '==', m);
+    // })
     
-    bot.answer('get', (m) => {
-        console.log(bot.question.rawQuestion, '::answer:', m);
-    })
+    // bot.answer('get', (m) => {
+    //     console.log('::', bot.question.rawQuestion, '==', m);
+    // })
     
     // bot.answer('hello', (m) => {
-    //     console.log(bot.question.rawQuestion, '::answer:', m);
+    //     console.log('::', bot.question.rawQuestion, '==', m);
     // })
 
     // bot.answer('сосиски с гаудой', (m) => {
-    //     console.log(bot.question.rawQuestion, '::answer:', m);
+    //     console.log('::', bot.question.rawQuestion, '==', m);
     // })
 
     // bot.answer('привет', (m) => {
-    //     console.log(bot.question.rawQuestion, '::answer:', m);
+    //     console.log('::', bot.question.rawQuestion, '==', m);
     // })
 
     // bot.answer('как дела?', (m) => {
-    //     console.log(bot.question.rawQuestion, '::answer:', m);
+    //     console.log('::', bot.question.rawQuestion, '==', m);
     // })
 
     // bot.answer('чтотонепонятное', (m) => {
-    //     console.log(bot.question.rawQuestion, '::answer:', m);
+    //     console.log('::', bot.question.rawQuestion, '==', m);
     // })
+
+    bot.answer('черепномозговая травма', (m) => {
+        console.log('::', bot.question.rawQuestion, '==', m);
+    })
+
+    bot.answer('столы', (m) => {
+        console.log('::', bot.question.rawQuestion, '==', m);
+    })
+
+    bot.answer('стол', (m) => {
+        console.log('::', bot.question.rawQuestion, '==', m);
+    })
 
     // console.log()
 }
