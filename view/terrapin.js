@@ -1,5 +1,3 @@
-// @ts-check
-
 var terrapinViewConfig = {
     labelInTitle: true,
     labelTag: 'rdfs#label111111',

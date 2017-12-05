@@ -1,5 +1,3 @@
-//@ts-check
-
 let Parser = require('../lib/knowledge/utils/Parser');
 let cwd = process.cwd();
 let NLP = require('../lib/nlp/NLP');

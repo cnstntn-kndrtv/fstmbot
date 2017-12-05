@@ -1,5 +1,3 @@
-//@ts-check
-
 let fs = require('fs');
 let Rule = require('../lib/bot/Rule');
 let Bot = require('../lib/bot/Bot');

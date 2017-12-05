@@ -1,5 +1,3 @@
-//@ts-check
-
 const DB = require('../lib/knowledge/utils/DB');
 const cwd = process.cwd();
 const fs = require('fs');
