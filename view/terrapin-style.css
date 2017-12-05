@@ -27,7 +27,7 @@
 }
 
 .colored .active rect {
-  fill: red;
+  fill: rgb(0, 47, 0);
 }
 
 .colored .active text {
@@ -37,7 +37,7 @@
 }
 
 .colored path.active {
-  stroke: red;
+  stroke: rgb(0, 47, 0);
   stroke-width: 4;
 }
 
@@ -73,6 +73,7 @@
 }
 
 
+
 /*monochrome*/
 .monochrome .terrapin-connection-point {
   stroke: white;
@@ -82,12 +83,23 @@
 
 .monochrome .terrapin-title-pillow {
   cursor: pointer;
-  /*B&W*/
   fill: rgb(67, 67, 67);
 }
 
-.monochrome .terrapin-title-pillow.active {
-  fill: red;
+
+.monochrome .active rect {
+  fill: rgb(0, 47, 0) !important;
+}
+
+.monochrome .active text {
+  fill: white !important;
+  font-size: 12px !important;
+  cursor: pointer;
+}
+
+.monochrome path.active {
+  stroke: rgb(0, 47, 0) !important;
+  stroke-width: 4 !important;
 }
 
 .monochrome .terrapin-title-text {
