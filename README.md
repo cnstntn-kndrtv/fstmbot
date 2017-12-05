@@ -1,4 +1,6 @@
-# FSTM bot with some NLP functions and knowledges
+# !!! Черновик для студентов лаборатории
+
+#№ FSTM bot with some NLP functions and knowledges
 
 ## Запуск  
 для парсинга знаний (knowledges.js парсится и превращается в knowledges.ttl) и загрузки базы знаний - levelGraph (llevelDB) в папке ./knowledgeDB

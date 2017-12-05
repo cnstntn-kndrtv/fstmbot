@@ -1,3 +1,5 @@
+//@ts-check
+
 let Bot = require('./lib/bot/Bot');
 let NLP = require('./lib/nlp/Nlp');
 

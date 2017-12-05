@@ -1,3 +1,5 @@
+// @ts-check
+
 var terrapinViewConfig = {
     labelInTitle: true,
     labelTag: 'rdfs#label111111',
@@ -702,11 +704,13 @@ function arrange() {
         else n.y = snapTogrid(n.y + findLowestPosition(n));
         n.isArranged = true;
     });
+
     middle.forEach((l, i) => {
         if (!l.target.isArranged) {
             l.target.x = snapTogrid(l.source.x + nodesOffset);
             let yOffset = l.source.predicates[l.predicate][l.target.id].yOffset;
             l.target.y = snapTogrid(l.source.y + yOffset + findLowestPosition(l.target));
+            l.target.isArranged = true;
         }
     })
 
