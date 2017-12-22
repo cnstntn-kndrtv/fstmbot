@@ -30,6 +30,7 @@
     "level": "^2.0.0",
     "levelgraph": "^2.1.1",
     "n3": "^0.11.2",
+    "normalize.css": "^7.0.0",
     "socket.io": "latest",
     "transliteration": "git://github.com/cnstntn-kndrtv/transliteration.git"
   }

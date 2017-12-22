@@ -1,3 +1,7 @@
+svg:not(:root) {
+  overflow: auto;
+}
+
 #button-block {
   position: absolute;
 }
@@ -62,7 +66,7 @@
   cursor: pointer;
 }
 
-.colored .terrapin-body-block {
+.colored .terrapin-body-pillow {
   fill: #D8E2D8;
   stroke: white;
   stroke-width: 2;
@@ -134,7 +138,7 @@
   cursor: pointer;
 }
 
-.monochrome .terrapin-body-block {
+.monochrome .terrapin-body-pillow {
   fill: #D8E2D8;
   stroke: white;
   stroke-width: 2;
