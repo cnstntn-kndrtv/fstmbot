@@ -12,7 +12,7 @@ bot.init().then((msg) => {
     bot.addActions(actions);
     bot.addRules(rules);
     start();
-}).catch((e) => {console.log(e)})
+}).catch((e) => console.log(e))
 
 let triples = [];
 function start() {

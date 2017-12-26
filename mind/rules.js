@@ -83,4 +83,32 @@ module.exports = [
         response: ['lemma'],
         action: null
     },
+    {
+        input: [''],
+        inputContext: null,
+        nextContext: '1',
+        response: null,
+        action: null
+    },
+    {
+        input: [''],
+        inputContext: '1',
+        nextContext: '2',
+        response: null,
+        action: null
+    },
+    {
+        input: [''],
+        inputContext: '1',
+        nextContext: '2',
+        response: null,
+        action: null
+    },
+    {
+        input: [''],
+        inputContext: '2',
+        nextContext: '3',
+        response: null,
+        action: null
+    },
 ]

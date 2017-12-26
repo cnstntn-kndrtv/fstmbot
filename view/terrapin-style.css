@@ -20,7 +20,7 @@ svg:not(:root) {
 }
 
 /* colored  */
-.colored .terrapin-connection-point {
+.colored .terrapin-connection-point-in {
   stroke: white;
   stroke-width: 1;
   fill: #CCDBCC;
@@ -31,7 +31,7 @@ svg:not(:root) {
 }
 
 .colored .active rect {
-  fill: rgb(0, 47, 0);
+  fill: rgb(0, 47, 0) !important;
 }
 
 .colored .active text {
@@ -41,7 +41,7 @@ svg:not(:root) {
 }
 
 .colored path.active {
-  stroke: rgb(0, 47, 0);
+  stroke: rgb(0, 47, 0) !important;
   stroke-width: 4;
 }
 
@@ -76,10 +76,17 @@ svg:not(:root) {
   stroke-width: 2;
 }
 
+.colored .terrapin-collapsed-predicate {
+  fill: #b7c1b7;
+}
+
+.colored .terrapin-collapsed-predicate-container .terrapin-body-pillow {
+  fill: #b7c1b7;
+}
 
 
 /*monochrome*/
-.monochrome .terrapin-connection-point {
+.monochrome .terrapin-connection-point-in {
   stroke: white;
   stroke-width: 1;
   fill: #CCDBCC;
@@ -126,8 +133,12 @@ svg:not(:root) {
 }
 
 /*B&W*/
-.monochrome .sourceNodes {
+.monochrome .terrapin-connection-point-out {
   fill: gray;
+}
+
+.monochrome .terrapin-connection-point-out-compact {
+  fill: rgb(67, 67, 67);
 }
 
 .monochrome .terrapin-object-text {
@@ -142,6 +153,14 @@ svg:not(:root) {
   fill: #D8E2D8;
   stroke: white;
   stroke-width: 2;
+}
+
+.monochrome .terrapin-collapsed-predicate {
+  fill: #b7c1b7;
+}
+
+.monochrome .terrapin-collapsed-predicate-container .terrapin-body-pillow {
+  fill: #b7c1b7;
 }
 
 .monochrome .links {
